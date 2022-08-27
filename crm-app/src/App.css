@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&display=swap');
+
+#root{
+    display: flex;
+    justify-content: center;
+}
+body{
+    background-color: #F2E3D5;
+    font-family: 'DM Sans', sans-serif;
+    
+}
+
+*{
+    box-sizing: border-box;
+}
+
+main{
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    max-width: 90%;
+    width: 90%;
+    margin: 20px;
+    padding: 10px;
+}
+
+.botonesModal{
+    background-color: #FFFFFF;;
+}
