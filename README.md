@@ -5,7 +5,7 @@ Evaluación Full Stack JS
 
 -Descargar e Instalar PostgreSQL v14.5 https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
 
-### INSTALACIÓN DE PAQUETES
+### PAQUETES
 
 npm install react-router-dom@6
 
@@ -18,3 +18,5 @@ npm i --save @fortawesome/free-solid-svg-icons
 npm i --save @fortawesome/free-regular-svg-icons
 
 npm i --save @fortawesome/react-fontawesome@latest
+
+npm install
