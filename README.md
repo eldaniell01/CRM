@@ -7,6 +7,8 @@ Evaluación Full Stack JS
 
 ### INSTALACIÓN DE PAQUETES
 
+npm install react-router-dom@6
+
 npm install --save styled-components
 
 npm i --save @fortawesome/fontawesome-svg-core
