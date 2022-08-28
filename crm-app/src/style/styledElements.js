@@ -210,7 +210,30 @@ const Navs = styled.nav`
     z-index: 50;
     height: 60px;
     background: #FFFFFF;
+    display: grid;
+    grid-template-columns: 1fr 60% 1fr;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    color: #000000;
 `;
 
-export {Input, TitleBig, TitleLittle, Groupinputs, Form, CheckSuccessful, Button, Alert, FormR, Subgroup, Navs};
+const GroupNav = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+`;
+
+const UserIcon = styled(FontAwesomeIcon)`
+    width: 25px;
+    height: 25px;
+`;
+
+
+export {Input, TitleBig, TitleLittle, Groupinputs, Form, CheckSuccessful, Button, Alert, FormR, Subgroup, Navs, GroupNav, UserIcon};
 

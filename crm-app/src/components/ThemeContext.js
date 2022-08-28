@@ -14,8 +14,16 @@ function Provider (props){
     const [pass2, changePass2] =useState({campo: '', valido: null});
     const [validation, changeValidation] =useState(false);
     const [formvalidation, changeFormvalidation] = useState(null);
-    const [openRegistro, setCloseRegistro] = useState(false)
+    const [openRegistro, setCloseRegistro] = useState(false);
+    const [user, setUser] = useState(true);
 
+    const signIn = ()=>{
+        setUser(true);
+    }
+
+    const signOut=()=>{
+        setUser(false);
+    }
     
     const regularExpr = {
         user: /^[a-zA-ZÀ-ÿ\s]{3,20}$/,
@@ -59,7 +67,10 @@ function Provider (props){
             pass2,
             changePass2,
             openRegistro,
-            setCloseRegistro
+            setCloseRegistro,
+            user,
+            signIn,
+            signOut
             
         }}>
             {props.children} 

@@ -5,31 +5,42 @@ import { Clientes } from './Clientes'
 import { Proyectos } from './Proyectos';
 import { Reuniones } from './Reuniones';
 import { Contactos } from './Contactos';
+import { Button, GroupNav, UserIcon } from '../style/styledElements';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faUser} from '@fortawesome/free-solid-svg-icons';
 export const Dashboard = () => {
   
   return (
     <>
       <NavPages>
+        <UserIcon icon={faUser} />
+        <GroupNav>
+          <ul>
+            <li>
+              <Link to="clientes">Clientes</Link>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <Link to="proyectos">Proyectos</Link>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <Link to="reuniones">Reuniones</Link>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <Link to="contactos">Contactos</Link>
+            </li>
+          </ul>
+        </GroupNav>
         <ul>
           <li>
-            <Link to="clientes">Clientes</Link>
+            <Link to="/">Cerrar Sesion</Link>
           </li>
-        </ul>
-        <ul>
-          <li>
-            <Link to="proyectos">Proyectos</Link>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <Link to="reuniones">Reuniones</Link>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <Link to="contactos">Contactos</Link>
-          </li>
-        </ul>
+        </ul> 
       </NavPages>
       <Routes>
         <Route path="clientes" element={<Clientes></Clientes>}/>

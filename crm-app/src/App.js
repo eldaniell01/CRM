@@ -8,6 +8,8 @@ import { Clientes } from './components/Clientes';
 import { Proyectos } from './components/Proyectos';
 import { Reuniones } from './components/Reuniones';
 import { Contactos } from './components/Contactos';
+import { Auth } from './components/Auth';
+import { Protect } from './components/Protect';
 
 function App() {
   return (
@@ -15,7 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<AppUI/>} />
         <Route path="/home//*" element={<Dashboard/>}/>
-        
+        <Route path='protegida' element={<Auth><Protect/></Auth>}/>
 
       </Routes>
       

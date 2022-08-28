@@ -26,3 +26,16 @@ main{
 .botonesModal{
     background-color: #FFFFFF;;
 }
+
+ul{
+    list-style-type: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    
+    text-decoration: none;
+    color: #000000;
+}

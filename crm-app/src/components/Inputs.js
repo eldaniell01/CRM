@@ -7,15 +7,15 @@ import { DataContext } from './ThemeContext';
 export const Inputs = (props) => {
 
 const eventListener=(e)=>{
-    changeState({...props.state, campo: e.target.value});
+    props.changeState({...props.state, campo: e.target.value});
 }
 
 const validationText = ()=>{
-    if(regularEx){
-        if(regularEx.test(props.state.campo)){
-            changeState({...props.state, valido:'true'})
+    if(props.regularEx){
+        if(props.regularEx.test(props.state.campo)){
+            props.changeState({...props.state, valido:'true'})
         }else{
-            changeState({...props.state, valido:'false'})
+            props.changeState({...props.state, valido:'false'})
         }
     }
 }
@@ -36,7 +36,7 @@ return (
                 background={props.background}
             />
             <CheckSuccessful
-                icon={props.state.valido ==='true'?icon:faCircleXmark}
+                icon={props.state.valido ==='true'?props.icon:faCircleXmark}
                 valido={props.state.valido}
             />
         </Groupinputs>

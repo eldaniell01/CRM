@@ -24,7 +24,10 @@ export const AppUI = () => {
     pass2,
     changePass2,
     openRegistro,
-    setCloseRegistro
+    setCloseRegistro,
+    user,
+    signIn,
+    signOut
   } = React.useContext(DataContext);
 
   
@@ -138,9 +141,17 @@ export const AppUI = () => {
               </Form>
             </ModalR>
             )}
-            <Link to="/home">
-              <Button>Iniciarsesión</Button>
-            </Link>
+            {user?(
+                <Link to="/home">
+                  <Button>Iniciar Sesión</Button>
+                </Link>
+              ):(
+                <Link to="/">
+                  <Button>Iniciar Sesión</Button>
+                </Link>
+              )
+            }
+            
             <Buttons
               setCloseRegistro={setCloseRegistro}
               text="Registrarse"
