@@ -24,6 +24,8 @@ const Font = {
     weight: '500'
 }
 
+
+// formulario de login
 const Form = styled.form`
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -135,6 +137,7 @@ const Alert = styled.p`
 
 `;
 
+// icono
 const CheckSuccessful = styled(FontAwesomeIcon)`
     position: absolute;
     right: 10px;
@@ -198,5 +201,16 @@ const FormR = styled.div`
 
 `;
 
-export {Input, TitleBig, TitleLittle, Groupinputs, Form, CheckSuccessful, Button, Alert, FormR, Subgroup};
+
+
+//Navegacion 
+const Navs = styled.nav`
+    position: absolute;
+    width: 100%;
+    z-index: 50;
+    height: 60px;
+    background: #FFFFFF;
+`;
+
+export {Input, TitleBig, TitleLittle, Groupinputs, Form, CheckSuccessful, Button, Alert, FormR, Subgroup, Navs};
 

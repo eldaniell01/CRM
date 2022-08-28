@@ -4,8 +4,8 @@ import { Inputs } from './Inputs';
 import {faCircleCheck} from '@fortawesome/free-solid-svg-icons';
 import { DataContext, Provider } from './ThemeContext';
 import { ModalR } from './ModalR';
-import { useContext, useState } from 'react';
 import { Buttons } from './Buttons';
+import { Link } from "react-router-dom";
 
 export const AppUI = () => {
   const {
@@ -138,7 +138,9 @@ export const AppUI = () => {
               </Form>
             </ModalR>
             )}
-            <Button type = 'submit' >Iniciar Sesión</Button>
+            <Link to="/home">
+              <Button>Iniciarsesión</Button>
+            </Link>
             <Buttons
               setCloseRegistro={setCloseRegistro}
               text="Registrarse"

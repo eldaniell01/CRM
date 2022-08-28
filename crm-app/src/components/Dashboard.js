@@ -1,0 +1,43 @@
+import React from 'react'
+import { NavPages } from './NavPages'
+import { Link, NavLink, Outlet, Route, Routes } from 'react-router-dom'
+import { Clientes } from './Clientes'
+import { Proyectos } from './Proyectos';
+import { Reuniones } from './Reuniones';
+import { Contactos } from './Contactos';
+export const Dashboard = () => {
+  
+  return (
+    <>
+      <NavPages>
+        <ul>
+          <li>
+            <Link to="clientes">Clientes</Link>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <Link to="proyectos">Proyectos</Link>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <Link to="reuniones">Reuniones</Link>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <Link to="contactos">Contactos</Link>
+          </li>
+        </ul>
+      </NavPages>
+      <Routes>
+        <Route path="clientes" element={<Clientes></Clientes>}/>
+        <Route path="proyectos" element={<Proyectos></Proyectos>}/>
+        <Route path="reuniones" element={<Reuniones></Reuniones>}/>
+        <Route path="contactos" element={<Contactos></Contactos>}/>
+      </Routes>
+    </>
+
+  )
+}
