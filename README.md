@@ -21,4 +21,8 @@ npm i --save @fortawesome/react-fontawesome@latest
 
 npm install
 
+### HOOKS y Utilidades
 
+- useState: se uso para manipular el estado de los inputs y poder validarlos con las expresiones regulares
+- useContext: se uso para enviar props sin importar si es un componente padre o hijo
+- react-router-dom: se uso para crear las rutas de las páginas 
