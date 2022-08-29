@@ -6,7 +6,7 @@
 
 #### Campos
 
--idCliente: identificador
+- idCliente: identificador
 
 - first_name: nombre del cliente
 
