@@ -212,6 +212,10 @@ const Navs = styled.nav`
     align-items: center;
     padding: 10px;
     color: #000000;
+    @media(max-width:600px){
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+    }
 `;
 
 const GroupNav = styled.div`
@@ -222,11 +226,16 @@ const GroupNav = styled.div`
     text-align: center;
     align-items: center;
     text-decoration: none;
+    @media(max-width:600px){
+        display: none;
+        justify-content: center;
+    }
 `;
 
 const UserIcon = styled(FontAwesomeIcon)`
     width: 25px;
     height: 25px;
+    
 `;
 
 

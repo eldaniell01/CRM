@@ -16,7 +16,9 @@ export const Dashboard = () => {
     <>
     {/* navegacion de rutas */}
       <NavPages>
-        <UserIcon icon={faUser} />
+        <div>
+          <UserIcon icon={faUser} />
+        </div>
         <GroupNav>
           <ul>
             <li>
