@@ -7,6 +7,8 @@ import { ModalR } from './ModalR';
 import { Buttons } from './Buttons';
 import { Link } from "react-router-dom";
 
+
+// componente login
 export const AppUI = () => {
   const {
     onsumit,

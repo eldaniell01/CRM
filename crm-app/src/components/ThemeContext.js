@@ -1,8 +1,7 @@
 import React, {useState, useContext} from "react";
 
+// componente encargado de enviar props a otros compoentes 
 const DataContext = React.createContext()
-
-
 function Provider (props){
     const [firtsname, changefirtsName] =useState({campo: '', valido: null});
     const [lastname, changeLastname] =useState({campo: '', valido: null});
@@ -15,8 +14,10 @@ function Provider (props){
     const [validation, changeValidation] =useState(false);
     const [formvalidation, changeFormvalidation] = useState(null);
     const [openRegistro, setCloseRegistro] = useState(false);
+    
+    
+    //validación de sesión 
     const [user, setUser] = useState(true);
-
     const signIn = ()=>{
         setUser(true);
     }
@@ -25,6 +26,7 @@ function Provider (props){
         setUser(false);
     }
     
+    //Expresiones regulares 
     const regularExpr = {
         user: /^[a-zA-ZÀ-ÿ\s]{3,20}$/,
         password: /^.{10,25}$/,
@@ -33,19 +35,7 @@ function Provider (props){
 
     }
 
-    const valuePassword = ()=>{
-        if(pass.campo.length>0){
-            if(pass.campo!==pass2.campo){
-                changePass2((prev)=>{
-                    return {...prev, valido: 'false'}
-                })
-            }else{
-                changePass2((prev)=>{
-                    return {...prev, valido: 'true'}
-                })
-            }
-        }
-    }
+    
     const onsumit=(e)=>{
         e.preventDefault();
         

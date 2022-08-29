@@ -4,12 +4,13 @@ import { Alert, CheckSuccessful, Groupinputs, Input, TitleLittle, Subgroup } fro
 import {faCircleXmark} from '@fortawesome/free-solid-svg-icons';
 import { DataContext } from './ThemeContext';
 
+//componente de Inputs 
 export const Inputs = (props) => {
 
 const eventListener=(e)=>{
     props.changeState({...props.state, campo: e.target.value});
 }
-
+/* validacion de campos con expresiones regulares */
 const validationText = ()=>{
     if(props.regularEx){
         if(props.regularEx.test(props.state.campo)){

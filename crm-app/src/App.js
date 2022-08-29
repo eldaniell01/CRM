@@ -4,13 +4,10 @@ import { Data, Provider } from './components/ThemeContext';
 import './App.css';
 import { Routes, Route, Link } from "react-router-dom";
 import { Dashboard } from './components/Dashboard';
-import { Clientes } from './components/Clientes';
-import { Proyectos } from './components/Proyectos';
-import { Reuniones } from './components/Reuniones';
-import { Contactos } from './components/Contactos';
 import { Auth } from './components/Auth';
 import { Protect } from './components/Protect';
 
+// componente principal 
 function App() {
   return (
     <Provider>

@@ -1,5 +1,7 @@
 import styled, {css} from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+//estilos para cada uno de los componentes
 //mensajes 
 const Colors ={
     successful: '#238C2A',
@@ -177,13 +179,6 @@ const Button = styled.button`
     }
 `;
 
-
-
-
-//check de validacion de formulario
-const CheckValue =  styled.div`
-
-`;
 
 
 //formulario de registro

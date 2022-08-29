@@ -8,10 +8,13 @@ import { Contactos } from './Contactos';
 import { Button, GroupNav, UserIcon } from '../style/styledElements';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faUser} from '@fortawesome/free-solid-svg-icons';
+
+// rutas 
 export const Dashboard = () => {
   
   return (
     <>
+    {/* navegacion de rutas */}
       <NavPages>
         <UserIcon icon={faUser} />
         <GroupNav>
