@@ -1,8 +1,16 @@
 import React, {useState, useContext} from "react";
+import { useHooks } from "./useHooks";
 
 // componente encargado de enviar props a otros compoentes 
 const DataContext = React.createContext()
 function Provider (props){
+    const{
+        item: newCliente,
+        saveCliente: saveC,
+        loading,
+        error
+    }=useHooks('cliente1',[]);
+    
     const [firtsname, changefirtsName] =useState({campo: '', valido: null});
     const [lastname, changeLastname] =useState({campo: '', valido: null});
     const [address, changeAddress] =useState({campo: '', valido: null});
@@ -15,7 +23,20 @@ function Provider (props){
     const [formvalidation, changeFormvalidation] = useState(null);
     const [openRegistro, setCloseRegistro] = useState(false);
     const [input, setInput] = useState({campo: '', valido: null});
+    const [stateSearch, setSearch] = React.useState('');
+    const totalCliente = newCliente.length;
     
+      
+    var searchCliente =[];
+    if(!stateSearch.length>0){
+        searchCliente = newCliente;
+    }else{
+        searchCliente = newCliente.filter(cliente=>{
+            const nombre = cliente.nombre.toLowerCase();
+            const searchC = stateSearch.toLowerCase();
+            return nombre.includes(searchC);
+        });
+    }
     //validación de sesión 
     const [user, setUser] = useState(true);
     const signIn = ()=>{
@@ -44,7 +65,9 @@ function Provider (props){
         setInput({...campo1, campo: e.target.value})
     }
 
-    
+    const todos=[
+        {id: '1', nombre: 'Juan', apellido: 'perez', telefono: '12345678'}
+      ];
 
     return (
         <DataContext.Provider value={{
@@ -70,7 +93,14 @@ function Provider (props){
             eventListener,
             input, 
             setInput,
-            regularExpr
+            regularExpr,
+            todos,
+            searchCliente,
+            totalCliente,
+            setSearch,
+            stateSearch,
+            loading,
+            error
         }}>
             {props.children} 
         </DataContext.Provider>

@@ -248,6 +248,54 @@ const PagesUser = styled.div`
     padding: 10px;
 `;
 
+const Lista = styled.div`
+    background: #159A9C;
+    display: grid;
+    grid-template-columns: 30px 1fr 1fr;
+    gap: 10px;
+    align-items: center;
+    justify-items: center;
+    border-radius: 5px;
+    transition: 0.4s;
+    &:hover{
+        background: #E1E1ED;
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    }
+`;
 
-export {Input, TitleBig, TitleLittle, Groupinputs, Form, PagesUser, CheckSuccessful, Button, Alert, FormR, Subgroup, Navs, GroupNav, UserIcon};
+
+// bucar 
+const SearchInput = styled.input`
+    width: 100%;
+    background-color: transparent ;
+    font-family: ${Font.text};
+    font-size: ${Font.size1};
+    font-weight: ${Font.weight};
+    border: 0;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 40px 0 10px;
+    transition: 0.5s ease all;
+    border: 3px solid transparent;
+    border-radius: 5px;
+    grid-column: span 2;
+    &:focus{
+        
+        outline: none;
+        box-shadow: 0px 5px 25px rgba(163,163,163,0.4); 
+    }
+    ${props => props.valido === 'false' && css`
+        border: 3px solid ${Colors.error};
+    `}
+    ${props => props.valido === 'true' && css`
+        border: 3px solid ${Colors.successful};
+    `}
+    ${props => props.background === 'true'&& css`
+        background-color: #FFFFFF;
+    `}
+    
+    
+`;
+
+export {Input, TitleBig, Lista, SearchInput, TitleLittle, Groupinputs, Form, PagesUser, CheckSuccessful, Button, Alert, FormR, Subgroup, Navs, GroupNav, UserIcon};
 
