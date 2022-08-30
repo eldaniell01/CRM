@@ -22,7 +22,7 @@ const validationText = ()=>{
 }
 return (
     <Subgroup grid ={props.grid}>
-        <TitleLittle color={props.color}>{props.Title}</TitleLittle>
+        <TitleLittle htmlFor={props.id} color={props.color}>{props.Title}</TitleLittle>
         <Groupinputs background={props.background}>
             
             <Input

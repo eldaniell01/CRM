@@ -238,6 +238,16 @@ const UserIcon = styled(FontAwesomeIcon)`
     
 `;
 
+const PagesUser = styled.div`
+    position: absolute;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    max-width: 90%;
+    width: 90%;
+    margin: 60px;
+    padding: 10px;
+`;
 
-export {Input, TitleBig, TitleLittle, Groupinputs, Form, CheckSuccessful, Button, Alert, FormR, Subgroup, Navs, GroupNav, UserIcon};
+
+export {Input, TitleBig, TitleLittle, Groupinputs, Form, PagesUser, CheckSuccessful, Button, Alert, FormR, Subgroup, Navs, GroupNav, UserIcon};
 

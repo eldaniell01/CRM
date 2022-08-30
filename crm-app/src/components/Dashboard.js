@@ -47,6 +47,7 @@ export const Dashboard = () => {
           </li>
         </ul> 
       </NavPages>
+      
       <Routes>
         <Route path="clientes" element={<Clientes></Clientes>}/>
         <Route path="proyectos" element={<Proyectos></Proyectos>}/>
